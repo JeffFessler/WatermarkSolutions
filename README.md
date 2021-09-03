@@ -19,7 +19,7 @@ that sharing or uploading solutions is dishonorable.
 and should state that using solutions from previous terms
 is dishonorable and an honor code violation.
 
-This repo provides another tool:
+* This repo provides another tool:
 custom watermarking of solutions
 with each student's email address.
 This watermark hopefully will further discourage students
