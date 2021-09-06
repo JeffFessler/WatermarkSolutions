@@ -1,0 +1,76 @@
+% solution.tex
+% example .tex file for homework/exam solutions
+% Run "pdflatex solution" to generate the "solution.pdf" file.
+% This generates the solution.pdf *before* any watermarking is applied.
+
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\usepackage[english]{babel}
+\usepackage{blindtext} % for junk text
+
+\usepackage[text={7.0in,9.6in}]{geometry}
+
+\usepackage{calc}
+\usepackage{ifthen}
+\newcounter{hours}\newcounter{minutes}
+\setcounter{hours}{\time/60}
+\setcounter{minutes}{\time-\value{hours}*60}
+%\newcommand{\Time}{\thehours:\theminutes}
+\newcommand{\Time}{%
+\protect\ifthenelse{\value{hours}<10}{0}{}\thehours:%
+\protect\ifthenelse{\value{minutes}<10}{0}{}\theminutes}
+
+\pagestyle{fancy}
+\setlength{\headheight}{36pt}
+\setlength{\headsep}{8pt}
+\fancyhead{}
+\chead{}
+\rhead{\thepage}
+\cfoot{}
+\setlength{\headsep}{0.2in}
+\setlength{\parindent}{0pt}
+\newcommand*{\parspace}{\\[4pt]}
+\vfuzz2pt % Do not report over-full v-boxes if over-edge is small
+\hfuzz2pt % Do not report over-full h-boxes if over-edge is small
+
+
+\chead{HW01 Solutions (\today\ \Time)\\
+It is an Honor Code violation to share these solutions,
+\\
+or to refer to solutions from past semesters.
+}
+\lhead{F21 EECS 101 \\ \copyright\ Prof. X, Univ. of Celebro}
+
+\begin{document}
+
+\thispagestyle{fancy}
+%\onehalfspacing % jf
+
+
+\vspace*{3em}
+For more information about these solutions,
+see
+\url{https://github.com/JeffFessler/WatermarkSolutions}
+
+\vspace*{3em}
+1.
+\blindtext
+
+\vspace*{3em}
+2.
+\textcolor{green}{\blindtext}
+
+\vspace*{3em}
+3.
+\Blindtext
+
+\definecolor{lightblue}{rgb}{0.92,0.92,1}
+
+\newpage
+4.
+\colorbox{lightblue}{\parbox{\linewidth}{\Blindtext}}
+
+\end{document}

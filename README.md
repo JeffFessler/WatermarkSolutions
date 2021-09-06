@@ -34,3 +34,18 @@ It requires functional installations of
 * The `pdflatex` binary from a `LaTeX` suite.
 * A recent release of the [Julia](julialang.org) language
 with its executable `julia` in the shell path.
+* The `convert` utility from [ImageMagick](https://imagemagick.org).
+
+
+### Steps
+
+* Write your homework/exam solution using your favorite text processor
+(such as LaTeX) and save it as pdf file `solution.pdf`.
+There is an example in the `examples` directory.
+
+* Put the email addresses of each student into a file `emails.txt`
+with one email per line.
+
+* Create `tmp/` and `output/` directories for files.
+
+* todo run the Julia script `run.jl` via `julia ... todo`

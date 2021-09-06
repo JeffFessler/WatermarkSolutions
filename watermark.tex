@@ -1,0 +1,42 @@
+% watermark.tex
+% The useful way to compile this is with a command-line specified email:
+% pdflatex "\def\email{username@university.edu} \input{watermark}"
+% If you simply run
+% pdflatex watermark
+% then you will get a test case with a dummy email
+
+\documentclass[12pt]{article}
+\usepackage{times}	% nice Times font
+\usepackage{rotating}
+\usepackage{xcolor}
+\usepackage[style=iso]{datetime2}
+\usepackage[text={7.5in,10.5in},letterpaper]{geometry}
+
+\providecommand{\email}{username@university.edu}
+%\definecolor{lightred}{rgb}{1,0.8,1}
+\newcommand{\mytext}{\textcolor{black}{for \email\ \today}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\sffamily\fontsize{34}{0}\selectfont
+\vspace*{0.9\textheight}
+\begin{rotate}{90}
+\mytext
+\end{rotate}
+
+\sffamily\fontsize{40}{0}\selectfont
+%\vspace*{0.9\textheight}
+\hspace*{0.07\textwidth}
+\begin{rotate}{52.3} % atan(11/8.5)*180/pi
+\mytext
+\end{rotate}
+
+\vfill
+\sffamily\fontsize{24}{0}\selectfont
+\mytext
+\normalsize
+\textcolor{white}{watermark: download by \email \today}
+
+\end{document}
