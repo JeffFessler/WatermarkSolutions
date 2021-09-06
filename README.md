@@ -48,4 +48,6 @@ with one email per line.
 
 * Create `tmp/` and `output/` directories for files.
 
-* todo run the Julia script `run.jl` via `julia ... todo`
+* Run the Julia script `run.jl` via `julia -- run.jl`
+
+That script will create a pdf file for each student in the `output/` directory.
