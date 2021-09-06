@@ -47,6 +47,7 @@ for email in emails
     # uses 'convert' from ImageMagick
     # todo: size is ignored!?
     cm = Cmd(`convert -size 2001x2590 watermark.pdf tmp/watermark-black.png`)
+    run(cm)
 
     black = load("tmp/watermark-black.png")
     rainbow = torainbow(black) # convert to rainbow
@@ -61,6 +62,7 @@ end
 
 # At this point in the script, director output/ has pdf files for each solution.
 # The rest of this script is for emailing those solutions to the students.
+# This part is not yet completed...
 for email in emails
     name = email2name(email)
 # todo

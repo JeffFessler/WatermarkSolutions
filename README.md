@@ -51,3 +51,6 @@ with one email per line.
 * Run the Julia script `run.jl` via `julia -- run.jl`
 
 That script will create a pdf file for each student in the `output/` directory.
+
+For an example of such output, see
+[`example/student.pdf`](https://github.com/JeffFessler/WatermarkSolutions/tree/main/example/student.pdf)
