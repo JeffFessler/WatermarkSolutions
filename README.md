@@ -35,6 +35,7 @@ It requires functional installations of
 * A recent release of the [Julia](julialang.org) language
 with its executable `julia` in the shell path.
 * The `convert` utility from [ImageMagick](https://imagemagick.org).
+* Python
 
 
 ### Steps
@@ -54,3 +55,9 @@ That script will create a pdf file for each student in the `output/` directory.
 
 For an example of such output, see
 [`example/student.pdf`](https://github.com/JeffFessler/WatermarkSolutions/tree/main/example/student.pdf)
+
+* It is quite likely you will need to edit some of the scripts
+to set up the paths for your system to get it all to work.
+For example, the python path in `merger.py` may need edited.
+These scripts are intended for "power users"
+who are comfortable with working at the command line.
