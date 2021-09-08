@@ -36,6 +36,9 @@ It requires functional installations of
 with its executable `julia` in the shell path.
 * The `convert` utility from [ImageMagick](https://imagemagick.org).
 * Python
+* After installing Julia, use its package manager to add the packages
+`FileIO, ColorTypes, ColorVectorSpace`
+that are all used by the script `run.jl`.
 
 
 ### Steps
