@@ -61,6 +61,9 @@ For an example of such output, see
 
 * It is quite likely you will need to edit some of the scripts
 to set up the paths for your system to get it all to work.
-For example, the python path in `merger.py` may need edited.
+For example, you might need to edit the python path
+in the first line of `merger.py`
+to be something like
+`#!/usr/bin/env python`.
 These scripts are intended for "power users"
 who are comfortable with working at the command line.
